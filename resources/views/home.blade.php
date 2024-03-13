@@ -30,14 +30,14 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('customers.index')  }}">View customer list</a>
+                        <a class="nav-link {{ request()->is('customers') ? 'active' : '' }}" href="{{ route('customers.index')  }}">View customer list</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('about-us') }}">Go about us</a>
+                        <a class="nav-link {{ request()->is('about-us') ? 'active' : '' }}" href="{{ route('about-us') }}">About us</a>
                     </li>
                 </ul>
             </div>

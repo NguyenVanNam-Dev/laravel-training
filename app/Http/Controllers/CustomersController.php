@@ -44,6 +44,7 @@ class CustomersController extends Controller
         ]);
 
         Customer::create($request->all());
+        Session::flash('success', 'Customer information save successfully.');
 
         return redirect()->route('customers.index');
     }
