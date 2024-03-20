@@ -5,6 +5,7 @@ use App\Http\Controllers\CustomersController;
 use App\Http\Controllers\AboutusController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CustomerAddressController;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,6 @@ Route::put('customers/{customer}', [CustomersController::class, 'update'])->name
 Route::delete('customers/{customer}', [CustomersController::class, 'destroy'])->name('customers.destroy');
 
 Route::resource('customer-address', CustomerAddressController::class);
+
+// Show form create new customer
+Route::get('test', [TestController::class, 'index']);
